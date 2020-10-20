@@ -8,7 +8,8 @@ class Hourssince < Formula
   depends_on "gcc" => :build
 
   def install
-    system "make", "all", "FC=/usr/local/bin/gfortran"
+    #system "make", "all", "FC=/usr/local/bin/gfortran"
+    system "make", "all", "FC=/home/linuxbrew/.linuxbrew/bin/gfortran"
     system "make", "install", "INSTALLDIR=#{prefix}"
   end
 end
